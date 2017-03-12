@@ -1,8 +1,8 @@
 This is the source repository for http://djljr.com, my personal website.
 
-It is generated using [Perun](perun.io).
+It is generated using [Perun](http://perun.io).
 
-The theme is based heavily on the [blue_centered theme](https://github.com/cryogen-project/cryogen/tree/master/src/leiningen/new/cryogen/themes/blue_centered) from [Cryogen](http://cryogenweb.org/http://cryogenweb.org/).
+The theme is based heavily on the [blue_centered theme](https://github.com/cryogen-project/cryogen/tree/master/src/leiningen/new/cryogen/themes/blue_centered) from [Cryogen](http://cryogenweb.org/).
 
 # License
 
