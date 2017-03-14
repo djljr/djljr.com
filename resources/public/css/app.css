@@ -10,7 +10,7 @@ body {
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 900px;
 }
 
 .right {
@@ -67,7 +67,7 @@ body {
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  padding-left :10px;
+  padding-left: 10px;
 }
 .dropdown-menu li a {
   color: #fff;
@@ -108,8 +108,8 @@ footer {
 }
 
 .post-header {
-  margin-bottom: 20px;
 }
+
 .post-header h2 {
   font-size: 32px;
 }

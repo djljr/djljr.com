@@ -1,7 +1,16 @@
 (ns djljr-com.views.common
   (:require [hiccup.core :refer [html]]
             [hiccup.page :refer [include-css include-js html5]]
-            [clj-time.core :as t]))
+            [clj-time.coerce :as tc]
+            [clj-time.format :as tf]
+            [clj-time.core :as t]
+            [clojure.contrib.humanize :as hu]))
+
+(defn date->time-ago [date]
+  (hu/datetime date))
+
+(defn date->date-str [date]
+  (tf/unparse (tf/formatters :date) (tc/from-date date)))
 
 (defn header []
   [:head
@@ -35,7 +44,7 @@
     [:div#navbar.navbar-collapse.collapse
      [:ul.nav.navbar-nav.navbar-right
       [:li [:a {:href "/blog"} "Blog"]]
-      [:li [:a {:href "/projects"} "Projects"]]]]]])
+      [:li [:a {:href "/about.html"} "About"]]]]]])
 
 (defn footer []
   [:footer (str "Copyright &copy; " (t/year (t/now)) " Dennis Lipovsky")
@@ -58,8 +67,7 @@
           (nav)
           [:div.container
            [:div.row
-            [:div.col-lg-3]
-            [:div.col-lg-6
+            [:div.col-lg-12
              [:div.content
               content]]]]
           (footer)

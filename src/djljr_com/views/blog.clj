@@ -3,12 +3,26 @@
             [djljr-com.views.common :as common]))
 
 
-(defn render-post [{metadata :meta post :entry}]
-  (println "render-post" metadata (keys post))
+(defn render-post [{metadata :meta
+                    {:keys [content date-created] :as entry} :entry}]
   (common/page
-   [:div "Blog Post"]))
+   [:div
+    [:div#content
+     [:div#post-meta
+      (common/date->time-ago date-created)]
+     content]]))
+
+(defn render-post-card [{:keys [name date-created description permalink]
+                         :as post}]
+  [:div
+   [:div.post-header
+    [:h2 [:a {:href permalink} name]]
+    [:div#post-meta
+     (common/date->date-str date-created)]]
+   [:div.post-description description]])
 
 (defn render-list [{metadata :meta posts :entries}]
-  (println "render-list" metadata (count posts))
   (common/page
-   [:div "Blog Post List"]))
+   [:div#post-list
+    (for [post posts]
+      (render-post-card post))]))
