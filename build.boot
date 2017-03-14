@@ -7,12 +7,15 @@
                  [pandeiro/boot-http "0.7.0"]
                  [org.martinklepsch/boot-gzip "0.1.2"]
                  [clj-time "0.13.0"]
-                 [clojure-humanize "0.2.2"]])
+                 [clojure-humanize "0.2.2"]
+                 [midje "1.8.3"]
+                 [zilti/boot-midje "0.2.2-SNAPSHOT"]])
 
 (require '[io.perun :refer :all]
          '[pandeiro.boot-http :refer [serve]]
          '[confetti.boot-confetti :refer [sync-bucket]]
-         '[org.martinklepsch.boot-gzip :refer [gzip]])
+         '[org.martinklepsch.boot-gzip :refer [gzip]]
+         '[zilti.boot-midje :refer [midje]])
 
 (task-options!
  pom {:project 'djljr.com
@@ -20,7 +23,8 @@
  sync-bucket {:bucket "djljr.com"
               :access-key (System/getenv "AWS_ACCESS_KEY")
               :secret-key (System/getenv "AWS_SECRET_KEY")
-              :dir "target/public"})
+              :dir "target/public"}
+ midje {:test-paths #{"test"}})
 
 (defn post? [page]
   (= "post" (:type page)))

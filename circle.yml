@@ -1,3 +1,6 @@
+test:
+  override:
+    - boot midje
 deployment:
   production:
     branch: master
