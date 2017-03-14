@@ -4,21 +4,21 @@
 
 
 (defn render-post [{metadata :meta
-                    {:keys [content date-created] :as entry} :entry}]
+                    {:keys [content date-published] :as entry} :entry}]
   (common/page
    [:div
     [:div#content
      [:div#post-meta
-      (common/date->time-ago date-created)]
+      (common/date->long-str date-published)]
      content]]))
 
-(defn render-post-card [{:keys [name date-created description permalink]
+(defn render-post-card [{:keys [name date-published description permalink]
                          :as post}]
   [:div
    [:div.post-header
     [:h2 [:a {:href permalink} name]]
     [:div#post-meta
-     (common/date->date-str date-created)]]
+     (common/date->date-str date-published)]]
    [:div.post-description description]])
 
 (defn render-list [{metadata :meta posts :entries}]

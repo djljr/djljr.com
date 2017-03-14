@@ -6,6 +6,9 @@
             [clj-time.core :as t]
             [clojure.contrib.humanize :as hu]))
 
+(defn date->long-str [date]
+  (tf/unparse (tf/formatter "EEEE, d MMM yyyy") (tc/from-date date)))
+
 (defn date->time-ago [date]
   (hu/datetime date))
 
