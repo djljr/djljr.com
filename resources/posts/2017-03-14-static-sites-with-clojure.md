@@ -19,11 +19,11 @@ keywords: clojure, perun, static website generator, aws, s3, hosting
 #### AWS Woes
 
 ```text
-dlipovsky@TURING:~/src/djljr.com$ boot -d confetti fetch-outputs --access-key AKIAIFJVN6OQQAENJTHA --secret-key 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 --confetti-edn djljr-com
+dlipovsky@TURING:~/src/djljr.com$ boot -d confetti fetch-outputs --access-key $AWS_ACCESS_KEY --secret-key $AWS_SECRET_KEY --confetti-edn djljr-com
 Fetching outputs for djljr-com.confetti.edn... Stack status is other than CREATE_COMPLETE: CREATE_IN_PROGRESS
 {:stack-info {:description Created by github.com/confetti-clj, :capabilities [CAPABILITY_IAM], :tags [], :disable-rollback false, :notification-arns [], :stack-name djljr-com, :stack-status CREATE_IN_PROGRESS, :stack-id arn:aws:cloudformation:us-east-1:122953312376:stack/djljr-com/95ba2fb0-085c-11e7-a095-500c20ff1436, :outputs [], :parameters [{:parameter-value djljr.com, :parameter-key UserDomain}], :creation-time #object[org.joda.time.DateTime 0x64d947aa 2017-03-14T02:19:00.020Z]}}
 
-dlipovsky@TURING:~/src/djljr.com$ boot -d confetti fetch-outputs --access-key AKIAIFJVN6OQQAENJTHA --secret-key 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 --confetti-edn djljr-com
+dlipovsky@TURING:~/src/djljr.com$ boot -d confetti fetch-outputs --access-key $AWS_ACCESS_KEY --secret-key $AWS_SECRET_KEY --confetti-edn djljr-com
 Fetching outputs for djljr-com.confetti.edn... Stack status is other than CREATE_COMPLETE: ROLLBACK_IN_PROGRESS
 {:stack-info {:description Created by github.com/confetti-clj, :capabilities [CAPABILITY_IAM], :tags [], :disable-rollback false, :notification-arns [], :stack-name djljr-com, :stack-status ROLLBACK_IN_PROGRESS, :stack-id arn:aws:cloudformation:us-east-1:122953312376:stack/djljr-com/95ba2fb0-085c-11e7-a095-500c20ff1436, :outputs [], :parameters [{:parameter-key UserDomain, :parameter-value djljr.com}], :creation-time #object[org.joda.time.DateTime 0x5bcb5d47 2017-03-14T02:19:00.020Z]}}
 ```
