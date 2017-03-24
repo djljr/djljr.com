@@ -24,5 +24,5 @@
 (defn render-list [{metadata :meta posts :entries}]
   (common/page
    [:div#post-list
-    (for [post posts]
+    (for [post (reverse (sort-by :date-published posts))]
       (render-post-card post))]))
