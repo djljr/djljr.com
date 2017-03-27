@@ -1,5 +1,5 @@
 ----
-name: Modeling with OpenSCAD
+name: Modeling Text with OpenSCAD
 description: Some simple models with text in OpenSCAD
 author: Dennis Lipovsky
 author-email: dennis.lipovsky@gmail.com
@@ -8,7 +8,7 @@ date-published: 2017-03-23
 type: post
 keywords: maker, 3d printing, openscad, modeling
 ---
-# Modeling with OpenSCAD
+# Modeling Text with OpenSCAD
 
 I've heard some good things about [OnShape], that will likely be the
 next tool I try out. I frequently use [Fusion360], the timeline
