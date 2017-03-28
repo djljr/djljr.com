@@ -10,20 +10,22 @@ keywords: maker, 3d printing, openscad, modeling
 ---
 # Modeling Text with OpenSCAD
 
-I've heard some good things about [OnShape], that will likely be the
-next tool I try out. I frequently use [Fusion360], the timeline
+Once you have a 3d printer for a while, you start getting the itch to create
+your own objects. I've heard some good things about [OnShape], that will likely
+be the next tool I try out. I frequently use [Fusion360], the timeline
 and user parameters are a good mix of visual design and programatic control.
-However, sometimes I reach for [OpenSCAD]. For the times when I want
-to model by writing a program.
+However, sometimes I reach for [OpenSCAD]. For when I want to model by writing
+a program.
 
 ## The Project
 
 In June 2016 a few coworkers got the idea that we wanted to have a 3d printer
 in the office. We started a kickstarter-like funding campaign to see if there
-was enough interest to make it happen. Long story short, there was. We built it
-and we've had it up and running ever since we built it in July. We opted for the
-[Prusa i3 MK2] since a few of us already experience with one. It was a ton of fun
-to put together and has had a lot of use since then.
+was enough interest to make it happen. Long story short, there was. Ordered it,
+built it and we have had it up and running ever since. We opted for the
+[Prusa i3 MK2] since a few of us already had experience with one. It was a ton
+of fun, I can recommend it for any company with enough technically inclined minds
+to put it together and keep it going.
 
 The reason this is relevant is that after our kickstarter style campaign ended,
 one of the things we promised the "backers" was a plaque with the names of everyone
@@ -85,7 +87,7 @@ union() {
 The plaque I ended up creating took up the entire 250x210 bed on the (Prusa i3 MK2)
 so I had some different settings there for speed purposes. Mainly fewer solid layers
 on the top/bottom and lower infill percent. For this sample I left the default
-settings on the Prusa edition of Slic3r.
+settings on the Prusa edition of slic3r.
 
 ## One last thing: color change
 
